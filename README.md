@@ -9,7 +9,7 @@ By Ben Aitcheson
 
 Link to Repository - [https://github.com/benaitcheson/terminal-app][1]
 
-- [ ] description
+- [x] description
 - [ ] functionality
 - [ ] instructions
 - [ ] installation
@@ -22,9 +22,27 @@ Link to Repository - [https://github.com/benaitcheson/terminal-app][1]
 
 
 ## Description
-This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand.
+This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
+
+## Installation
 
 
+## Functionality
+
+
+## Instructions
+
+
+## Design & Planning
+
+
+## Control Flow
+
+
+## Testing
+
+
+## Gems
 
 
 ## Authors
