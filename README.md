@@ -26,6 +26,11 @@ This application was designed and built to solve my issue of having items in the
 
 ## Installation
 
+Bundle init
+
+```ruby
+gem install 
+```
 
 ## Functionality
 
@@ -53,9 +58,8 @@ Ben Aitcheson - [My Github account][2]
 
 Thanks to the team at Coder Academy for their support.
 
-Video tutorials used to contribute are:
-1. [freeCodeCamp][3]
-1. [Wes Bos][4]
+Style Guide from Airbnb : https://github.com/airbnb/ruby
+
 
 
 
