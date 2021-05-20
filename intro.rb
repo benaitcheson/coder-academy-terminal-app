@@ -1,8 +1,14 @@
 
+require 'rubygems'
+require 'bundler'
 require "tty-prompt"
-require "artii"
+require 'artii'
 
-artii 'RubyRecipes!'
+a = Artii::Base.new
+puts a.asciify('Welcome to RubyRecipes')
+
+
+
 
 
 prompt = TTY::Prompt.new
