@@ -1,4 +1,3 @@
-
 require 'rubygems'
 require 'bundler'
 require "tty-prompt"
@@ -15,16 +14,17 @@ prompt = TTY::Prompt.new
 
 # Welcome messages
 
-puts a.asciify('Welcome to RubyRecipes!')
+puts a.asciify("RubyRecipe")
 puts "\n" * 5
 
-    user_name = prompt.ask("What is your name?\n\n", default: ENV["USER"])
+    user_name = prompt.ask("What is your name?", default: ENV["USER"])
 
     system ("clear")
 
-    puts a.asciify('Welcome to RubyRecipes!')
+    puts a.asciify("RubyRecipe")
     puts "\n" * 5
-    puts "Hi #{user_name}, Welcome to RubyRecipes.\n\n" #ADD user variable
+    puts "Hi #{user_name}, welcome to RubyRecipe!"
+    puts "\n" * 5
 
 
     # Ask for pantry and fridge items
@@ -34,15 +34,7 @@ puts "\n" * 5
         q.convert -> (input) { input.split(/,\s*/) }
     end
 
-
-
-
-
-# prompt for email address to send recipe to
-
-#prompt.ask("What is your email?") do |q|
-#    q.validate(/\A\w+@\w+\.\w+\Z/, "Invalid email address")
-#end
+    
 
 
 
