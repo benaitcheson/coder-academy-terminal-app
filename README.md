@@ -9,6 +9,7 @@ By Ben Aitcheson
 Link to Repository - [Terminal App Repo][1]
 
 - [x] description
+- [ ] statement of purpose
 - [ ] functionality
 - [ ] instructions
 - [ ] installation
@@ -22,6 +23,13 @@ Link to Repository - [Terminal App Repo][1]
 
 ## Description
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
+
+## Statement of purpose
+
+- describe at a high level what the application will do
+- identify the problem it will solve and explain why you are developing it
+- identify the target audience
+- explain how a member of the target audience will use it
 
 ## Installation
 
