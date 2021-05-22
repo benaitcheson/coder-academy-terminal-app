@@ -3,6 +3,7 @@ require 'rubygems'
 require 'bundler'
 require "tty-prompt"
 require 'artii'
+
 Bundler.require
 
 system ("clear")
@@ -15,12 +16,14 @@ prompt = TTY::Prompt.new
 # Welcome messages
 
 puts a.asciify('Welcome to RubyRecipes!')
+puts "\n" * 5
 
     user_name = prompt.ask("What is your name?\n\n", default: ENV["USER"])
 
     system ("clear")
 
     puts a.asciify('Welcome to RubyRecipes!')
+    puts "\n" * 5
     puts "Hi #{user_name}, Welcome to RubyRecipes.\n\n" #ADD user variable
 
 
