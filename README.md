@@ -1,13 +1,12 @@
+# Coder Academy - Ruby Terminal App
 
 insert shields
 
-
-# Coder Academy - Ruby Terminal App
 ## Assignment 3 - Term 1 (T1A3)
 
 By Ben Aitcheson
 
-Link to Repository - [https://github.com/benaitcheson/terminal-app][1]
+Link to Repository - [Terminal App Repo][1]
 
 - [x] description
 - [ ] functionality
@@ -26,11 +25,21 @@ This application was designed and built to solve my issue of having items in the
 
 ## Installation
 
-Bundle init
+If you have ruby installed on your computer there are a few steps to get RubyRecipe up and running.
+
+1. Download the git repo and run bundle install from the folder and this will install all the gems and their dependencies.
 
 ```ruby
-gem install 
+bundle install 
 ```
+
+2. Then to launch the application all you need to do is run this code in your terminal.
+
+```ruby
+ruby intro.rb
+```
+
+3. Enjoy!
 
 ## Functionality
 
@@ -63,8 +72,4 @@ Style Guide from Airbnb : https://github.com/airbnb/ruby
 
 
 
-[1]: https://priceless-jackson-e53021.netlify.app/
-[2]: https://github.com/benaitcheson
-[3]: https://www.freecodecamp.org/
-[4]: https://wesbos.com/
-[5]: https://www.netlify.com/
+[1]: https://github.com/benaitcheson/terminal-app/
