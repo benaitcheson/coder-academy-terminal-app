@@ -6,4 +6,5 @@ group :development do
   gem "bundler"
   gem "artii"
   gem "tty-prompt"
+  gem "json"
 end

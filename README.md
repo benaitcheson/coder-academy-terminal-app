@@ -1,12 +1,14 @@
 # Coder Academy - Ruby Terminal App
 
-insert shields
+<img src="https://img.shields.io/tokei/lines/github/benaitcheson/terminal-app?style=flat-square">
+<img src="https://img.shields.io/github/languages/top/benaitcheson/terminal-app?style=flat-square">
+<img src="https://img.shields.io/github/repo-size/benaitcheson/terminal-app?style=flat-square">
 
 ## Assignment 3 - Term 1 (T1A3)
 
-By Ben Aitcheson
+By Ben Aitcheson - [My Github][1]
 
-Link to Repository - [Terminal App Repo][1]
+Link to Repository - [Terminal App Repo][2]
 
 - [x] description
 - [ ] statement of purpose
@@ -25,11 +27,27 @@ Link to Repository - [Terminal App Repo][1]
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
 
 ## Statement of purpose
-
 - describe at a high level what the application will do
+
+This application will receive food items the user has at their disposal and return some recipes that the user could make with the food they have, or return recipes the user would only need to get a small amount of additional items.
+
+
+
 - identify the problem it will solve and explain why you are developing it
+
+
+
+
 - identify the target audience
+
+
+
+
 - explain how a member of the target audience will use it
+
+
+
+
 
 ## Installation
 
@@ -80,4 +98,5 @@ Style Guide from Airbnb : https://github.com/airbnb/ruby
 
 
 
-[1]: https://github.com/benaitcheson/terminal-app/
+[1]: https://github.com/benaitcheson
+[2]: https://github.com/benaitcheson/terminal-app/
