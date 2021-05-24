@@ -27,23 +27,19 @@ Link to Repository - [Terminal App Repo][2]
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
 
 ## Statement of purpose
-- describe at a high level what the application will do
+>> describe at a high level what the application will do
 
-This application will receive food items the user has at their disposal and return some recipes that the user could make with the food they have, or return recipes the user would only need to get a small amount of additional items.
+This application will receive food items the user has at their disposal and return some recipes that the user could make with the food they have, or return recipes the user would only need to get a small amount of additional items. The user can then rate recipes and have the recipe downloaded or emailed to them.
 
+>> identify the problem it will solve and explain why you are developing it
 
+I have spent a long time searching through recipes to find some that match the ingredients in my pantry to save myself time and money going to the grocery store and buying more items to make a meal and neglecting the food in my pantry. As well as spending more money on things I don't need. So, I am developing this application to save myself time and money. With the added benefit of learning to make meals from the stable ingredients in my pantry.
 
-- identify the problem it will solve and explain why you are developing it
+>> identify the target audience
 
+The target audience is people like me who have lots of stable ingredients in their pantry or fridge and don't want to go the the grocery store to get more items. They like cooking and could be any age or demographic.
 
-
-
-- identify the target audience
-
-
-
-
-- explain how a member of the target audience will use it
+>> explain how a member of the target audience will use it
 
 
 

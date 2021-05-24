@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'bundler'
-require "tty-prompt"
+require 'tty-prompt'
 require 'artii'
+require 'httparty'
 
 Bundler.require
 
@@ -34,7 +35,7 @@ puts "\n" * 5
         q.convert -> (input) { input.split(/,\s*/) }
     end
 
-    
+
 
 
 
