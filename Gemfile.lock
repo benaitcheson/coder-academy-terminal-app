@@ -3,6 +3,8 @@ GEM
   specs:
     artii (2.1.2)
     diff-lcs (1.4.4)
+    highline (2.0.3)
+    json (2.5.1)
     pastel (0.8.0)
       tty-color (~> 0.5)
     rspec (3.10.0)
@@ -36,6 +38,8 @@ PLATFORMS
 DEPENDENCIES
   artii
   bundler
+  highline
+  json
   rspec
   tty-prompt
 

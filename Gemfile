@@ -7,4 +7,5 @@ group :development do
   gem "artii"
   gem "tty-prompt"
   gem "json"
+  gem "highline"
 end
