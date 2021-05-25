@@ -7,13 +7,18 @@ require 'artii'
 require 'httparty'
 require 'highline/import'
 
+# Use a progress bar for getting recipes
+
+
 # Initiate bundler
 
 Bundler.require
 
+
 # Clear users current terminal screen
 
 system ("clear")
+
 
 # Define variables for gems
 
