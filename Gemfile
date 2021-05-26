@@ -8,4 +8,5 @@ group :development do
   gem "tty-prompt"
   gem "json"
   gem "highline"
+  gem "tty-progressbar"
 end

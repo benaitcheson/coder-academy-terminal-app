@@ -6,9 +6,7 @@ require 'tty-prompt'
 require 'artii'
 require 'httparty'
 require 'highline/import'
-
-# Use a progress bar for getting recipes
-
+require 'tty-progressbar'
 
 # Initiate bundler
 
@@ -30,15 +28,21 @@ a = Artii::Base.new
 puts a.asciify("RubyRecipe")
 puts "\n" * 5
 
-def confirmation_hearings
-    answers = {}
-    answers[:name] = ask('What is your name? ')
-    answers[:user_pantry] = ask('What have you got in the pantry?')
-    puts "Okay, let's see what recipes we can find for you"
-    return answers
+def which_user
+    user_answers = {}
+    user_answers[:name] = ask('What is your name? This will be saved to access your pantry in the future.')
+    return user_answers
 end
 
-confirmation_hearings
+
+
+
+
+# Insert tty-progress bar
+
+
+
+
 
 # TODO: Give user suggestions for pantry recipes
 # TODO: Say welcome back to the user
