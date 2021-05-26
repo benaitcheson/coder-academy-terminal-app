@@ -11,35 +11,47 @@ require 'tty-progressbar'
 # require_relative 'recipes.rb'
 # require_relative 'pantry.rb'
 
-response = HTTParty.get('https://edamam-recipe-search.p.rapidapi.com/search?q=chicken')
-puts response.body
-
 # Initiate bundler & clear users terminal to start
 
 Bundler.require
-# system ("clear")
+system 'clear'
+prompt = TTY::Prompt.new
 
+def welcome_message
+    a = Artii::Base.new
+    puts a.asciify("RubyRecipe".center(150))
+    puts "\n" * 5
+    puts "Welcome!\n\n
+        Here's a bit of information about this application.\n\n
+        This application allows you to build an electronic version of your pantry\n
+        When you make a pantry we can align recipes so you can save time and money
+        by not going to the grocery store.\n
+        So let's start by building your pantry!\n\n\n\n"
+end
 
-# Create a class for intro and user messages
-# Will ask for user information
+def pantry_menu(pantry_prompt)
+    pantry_choices = [
+    {name: "View your pantry items", value: 1},
+    {name: "Add an item/s to your pantry", value: 2},
+    {name: "Remove items from the pantry", value: 3},
+    {name: "Quit", value: 4}
+    ]
 
-class Intro
+    pantry_prompt.select("Please choose an option:", pantry_choices)
+end
 
-    # Welcome message method
+def recipe_menu(recipe_prompt)
+    recipe_choices = [
+    {name: "Search recipes via name", value: 1},
+    {name: "Search recipes via ingredients", value: 2},
+    {name: "Generate recipe search from items in pantry", value: 3},
+    {name: "Remove a saved recipe", value: 4}
+    {name: "Modify a saved recipe", value: 5}
+    {name: "Quit", value: 6}
+    ]
 
-    def welcome_message(user)
-        a = Artii::Base.new
-        puts a.asciify("RubyRecipe".center(150))
-        puts "\n" * 5
-
-        user = ask('What is your name? This will be saved to access your pantry in the future.')
-
-        system ("clear")
-        puts a.asciify("RubyRecipe")
-        puts "\n" * 5
-    end
-
-    welcome_message.gets.chomp
+    recipe_prompt.select("Please choose an option:", recipe_choices)
+end
 
     # check if returning user or new user
     # check user DOB
@@ -58,17 +70,6 @@ class Intro
         else
             puts "Sorry, I don't recognise that option."
     end # problem here
-
-    # New user welcome
-    else
-        puts "Welcome #{@user.capitalize}!\n\n"
-        puts "Here's a bit of information about this application.\n\n"
-        puts "This application allows you to build an electronic version of your pantry\n"
-        puts "When you make a pantry we can align recipes so you can save time and money by not going to the grocery store.\n"
-        puts "So let's start by building your pantry!\n\n\n\n"
-
-        # sends the user to the pantry
-    end
 
 
 
