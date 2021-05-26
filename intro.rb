@@ -17,16 +17,27 @@ Bundler.require
 system 'clear'
 prompt = TTY::Prompt.new
 
-def welcome_message
+def ruby_recipe_logo
     a = Artii::Base.new
-    puts a.asciify("RubyRecipe".center(150))
+    puts a.asciify("RubyRecipe")
     puts "\n" * 5
-    puts "Welcome!\n\n
-        Here's a bit of information about this application.\n\n
-        This application allows you to build an electronic version of your pantry\n
-        When you make a pantry we can align recipes so you can save time and money
-        by not going to the grocery store.\n
-        So let's start by building your pantry!\n\n\n\n"
+end
+
+def welcome_message
+    puts "Welcome to RubyRecipe!\n\n"
+
+    puts "To start off let's go through a quick description.\n\n"
+
+    puts "This application allows you to build an electronic version of your pantry\n"
+    puts "you can also search for recipes from the internet"
+    puts "\n"
+
+    puts "So let's get started!\n\n\n\n"
+end
+
+def start_menu
+
+
 end
 
 def pantry_menu(pantry_prompt)
@@ -45,48 +56,27 @@ def recipe_menu(recipe_prompt)
     {name: "Search recipes via name", value: 1},
     {name: "Search recipes via ingredients", value: 2},
     {name: "Generate recipe search from items in pantry", value: 3},
-    {name: "Remove a saved recipe", value: 4}
-    {name: "Modify a saved recipe", value: 5}
+    {name: "Remove a saved recipe", value: 4},
+    {name: "Modify a saved recipe", value: 5},
     {name: "Quit", value: 6}
     ]
 
     recipe_prompt.select("Please choose an option:", recipe_choices)
 end
 
-    # check if returning user or new user
-    # check user DOB
-
-    # Returning user
-    if user == "Ben" # make this part query a database of users
-        puts "Welcome back #{user}! Would you like to go to your pantry or view recipes?"
-        returning_user_response = gets.chomp.downcase
-
-        if returning_user_response == "pantry"
-            puts "Awesome, you've chosen the Pantry! Let's go"
-
-        elsif returning_user_response == "recipes" || "recipe"
-            puts "Awesome, you've chosen Recipes! Let's go!"
-
-        else
-            puts "Sorry, I don't recognise that option."
-    end # problem here
-
-
-
+def progress_bar
     # Progress bar for generating recipe list
     bar = TTY::ProgressBar.new("[:bar]".center(150), total: 20, bar_format: :blade)
     20.times do
         sleep(0.1)
         bar.advance
     end
-
-    system ("clear")
-    puts a.asciify("RubyRecipe")
-    puts "\n" * 5
-
 end
 
-
+ruby_recipe_logo
+welcome_message
+start_menu
+progress_bar
 
 
 # Make an exit button
