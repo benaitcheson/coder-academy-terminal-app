@@ -13,7 +13,7 @@ Link to Repository - [Terminal App Repo][2]
 - [x] description
 - [x] statement of purpose
 - [ ] functionality
-- [ ] instructions
+- [x] instructions
 - [x] installation
 - [ ] design and planning
 - [x] flow chart
@@ -72,13 +72,21 @@ variables
 
 ## Instructions/Interaction
 
+The user will be prompted for a name and their date of birth. This will be their login.
+
+Once logged for the first time the user will be prompted to build their pantry. Listing out all the items in their pantry and fridge. After completing this step the user can search recipes or have a list of recipes generated for them from the items in their pantry.
+
+Once a list of recipes has been generated the user can view a single recipe and save the recipe or choose to cook the recipe and make amendments or leave the recipe as it is.
 
 ## Design & Planning
 
+The design for this application was intended for the user to be able to step through a series of menu's allowing them to build a pantry and then amend their saved recipes.
 
 ## Control Flow
 
-User builds a pantry
+In this step Control Flow of the Terminal Application will be explained in detail.
+
+
 
 <img src="../terminal-app/flowchart.png">
 
@@ -110,8 +118,7 @@ Thanks to the team at Coder Academy for their support.
 
 Style Guide from Airbnb : https://github.com/airbnb/ruby
 
-
-
+API generated through RapidAPI: https://rapidapi.com/marketplace
 
 [1]: https://github.com/benaitcheson
 [2]: https://github.com/benaitcheson/terminal-app/
