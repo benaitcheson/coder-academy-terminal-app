@@ -8,14 +8,16 @@ require 'httparty' # haven't used yet
 require 'highline/import' # haven't used yet
 require 'tty-progressbar'
 
-require_relative 'recipes.rb'
-require_relative 'pantry.rb'
+# require_relative 'recipes.rb'
+# require_relative 'pantry.rb'
 
+response = HTTParty.get('https://edamam-recipe-search.p.rapidapi.com/search?q=chicken')
+puts response.body
 
 # Initiate bundler & clear users terminal to start
 
 Bundler.require
-system ("clear")
+# system ("clear")
 
 
 # Create a class for intro and user messages
@@ -25,26 +27,26 @@ class Intro
 
     # Welcome message method
 
-    def welcome_message
+    def welcome_message(user)
         a = Artii::Base.new
         puts a.asciify("RubyRecipe".center(150))
         puts "\n" * 5
 
-        @user = ask('What is your name? This will be saved to access your pantry in the future.')
+        user = ask('What is your name? This will be saved to access your pantry in the future.')
 
         system ("clear")
         puts a.asciify("RubyRecipe")
         puts "\n" * 5
     end
 
-    welcome_message
+    welcome_message.gets.chomp
 
     # check if returning user or new user
     # check user DOB
 
     # Returning user
     if user == "Ben" # make this part query a database of users
-        puts "Welcome back #{@user}! Would you like to go to your pantry or view recipes?"
+        puts "Welcome back #{user}! Would you like to go to your pantry or view recipes?"
         returning_user_response = gets.chomp.downcase
 
         if returning_user_response == "pantry"
