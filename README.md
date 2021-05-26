@@ -16,16 +16,16 @@ Link to Repository - [Terminal App Repo][2]
 - [ ] instructions
 - [x] installation
 - [ ] design and planning
-- [ ] flow chart
+- [x] flow chart
 - [ ] testing
 - [ ] code structure
-- [ ] gems
+- [x] gems
 
 
 ## Description
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
 
-## Statement of purpose
+## Statement of Purpose
 This application will receive food items the user has at their disposal and return some recipes that the user could make with the food they have, or return recipes the user would only need to get a small amount of additional items. The user can then rate recipes and have the recipe downloaded or emailed to them.
 
 I have spent a long time searching through recipes to find some that match the ingredients in my pantry to save myself time and money going to the grocery store and buying more items to make a meal and neglecting the food in my pantry. As well as spending more money on things I don't need. So, I am developing this application to save myself time and money. With the added benefit of learning to make meals from the stable ingredients in my pantry.
@@ -62,6 +62,7 @@ Features include:
 1. Users can create a pantry.
 2. Users can search for recipes.
 3. Users can rate and review recipes.
+4. Users can generate a recipe list from the items in their pantry.
 
 
 Include how those use these...
@@ -79,24 +80,25 @@ variables
 
 User builds a pantry
 
-<img src="">
+<img src="../terminal-app/flowchart.png">
 
 
 
 
 ## Testing
 
-Testing of the ruby code was done with a Gem called RSPEC. 
+Testing of the ruby code was done with a Gem called rSpec. 
 
 ## Gems
 
 Here is a list of the gems used for this application:
 
 - TTY Prompt
+- TTY Progressbar
 - JSON
 - Artii
-- RSPEC
-- 
+
+All gems sourced from [Rubygems.org][3]
 
 ## Authors
 
@@ -113,3 +115,4 @@ Style Guide from Airbnb : https://github.com/airbnb/ruby
 
 [1]: https://github.com/benaitcheson
 [2]: https://github.com/benaitcheson/terminal-app/
+[3]: https://rubygems.org/
