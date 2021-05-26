@@ -28,12 +28,32 @@ a = Artii::Base.new
 puts a.asciify("RubyRecipe")
 puts "\n" * 5
 
-def which_user
-    user_answers = {}
-    user_answers[:name] = ask('What is your name? This will be saved to access your pantry in the future.')
-    return user_answers
-end
+user = ask('What is your name? This will be saved to access your pantry in the future.')
 
+system ("clear")
+puts a.asciify("RubyRecipe")
+puts "\n" * 5
+
+# check if returning user or new user
+
+
+
+# Returning user
+
+
+# New user
+
+puts "Hi #{user}, let's get started!"
+puts ""
+
+
+
+# Progress bar for generating recipe list
+bar = TTY::ProgressBar.new("[:bar]".center(150), total: 20, bar_format: :blade)
+30.times do
+    sleep(0.1)
+    bar.advance  # by default increases by 1
+end
 
 
 
