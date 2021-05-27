@@ -14,3 +14,24 @@ request["x-rapidapi-host"] = 'edamam-recipe-search.p.rapidapi.com'
 
 response = http.request(request)
 puts response.read_body
+
+class StackExchange
+    include HTTParty
+    base_uri 'api.stackexchange.com'
+  
+    def initialize(service, page)
+      @options = { query: { site: service, page: page } }
+    end
+  
+    def questions
+      self.class.get("/2.2/questions", @options)
+    end
+  
+    def users
+      self.class.get("/2.2/users", @options)
+    end
+  end
+  
+  stack_exchange = StackExchange.new("stackoverflow", 1)
+  puts stack_exchange.questions
+  puts stack_exchange.
