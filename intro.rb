@@ -9,7 +9,7 @@ require 'highline/import' # haven't used yet
 require 'tty-progressbar'
 
 # require_relative 'recipes.rb'
-# require_relative 'pantry.rb'
+require_relative 'pantry.rb'
 
 # Initiate bundler & clear users terminal to start
 
@@ -73,7 +73,7 @@ def progress_bar
     end
 end
 
-system 'clear'
+# system 'clear'
 welcome_message
 
 name = gets.strip.downcase
