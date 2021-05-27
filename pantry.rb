@@ -1,9 +1,8 @@
 class Pantry
 
 
-    def initialize(name, description)
+    def initialize(name)
       @name = name
-      @description = description
       @file_path = "./lists/#{name}.txt"
       @list = []
     end

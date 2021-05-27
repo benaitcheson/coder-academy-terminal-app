@@ -81,7 +81,7 @@ name = gets.strip.downcase
 pantry_list = Pantry.new(name)
 
 loop do
-  case menu(prompt)
+  case pantry_menu(prompt)
   when 1
     pantry_list.view
   when 2
