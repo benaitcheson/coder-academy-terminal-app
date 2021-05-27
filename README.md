@@ -36,6 +36,8 @@ With a small understanding of downloading a github repo and running a file in te
 
 ## Installation
 
+**Something about .sh file**
+
 If you have ruby installed on your computer there are a few steps to get RubyRecipe up and running.
 
 1. Download the git repo to your computer.
@@ -58,6 +60,9 @@ ruby intro.rb
 
 ## Functionality
 Features include:
+
+<img src="">
+
 
 1. Users can create a pantry.
 2. Users can search for recipes.
@@ -85,6 +90,7 @@ The design for this application was intended for the user to be able to step thr
 ## Control Flow
 
 In this step Control Flow of the Terminal Application will be explained in detail.
+
 
 
 

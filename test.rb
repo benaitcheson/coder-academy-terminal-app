@@ -27,6 +27,6 @@ def api
     puts response
 end
 
-api()
+
 
     

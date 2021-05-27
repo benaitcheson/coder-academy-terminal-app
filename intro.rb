@@ -2,13 +2,13 @@
 
 require 'rubygems'
 require 'bundler'
-require 'tty-prompt' # haven't used yet
+require 'tty-prompt'
 require 'artii'
 require 'httparty' # haven't used yet
 require 'highline/import' # haven't used yet
 require 'tty-progressbar'
 
-# require_relative 'recipes.rb'
+require_relative 'recipes.rb'
 require_relative 'pantry.rb'
 
 # Initiate bundler & clear users terminal to start
@@ -18,10 +18,18 @@ system 'clear'
 prompt = TTY::Prompt.new
 
 def ruby_recipe_logo
-    a = Artii::Base.new
-    puts a.asciify("RubyRecipe")
-    puts "\n" * 5
+    begin
+        a = Artii::Base.new
+        puts a.asciify("RubyRecipe")
+        puts "\n" * 5
+
+    rescue
+        puts "Oops. There should be a logo here."
+    end
 end
+
+
+# Welcome message method
 
 def welcome_message
     puts "Welcome to RubyRecipe!\n\n"
@@ -35,10 +43,51 @@ def welcome_message
     puts "So let's get started!\n\n\n\n"
 end
 
+
+# Check if returning use method
+
 def start_menu
+
+    # system 'clear'
+    welcome_message
+
+    name = gets.strip.downcase
+
+    pantry_list = Pantry.new(name)
+
+    loop do
+        case pantry_menu(prompt)
+        when 1
+            pantry_list.view
+        when 2
+            pantry_list.add
+        when 3
+            pantry_list.remove
+        when 4
+            exit   
+        end    
+    end
+
+    recipe_list = Recipe.new(name)
+
+    loop do
+        case recipe_menu(prompt)
+        when 1
+            recipe_list.view
+        when 2
+            recipe_list.add
+        when 3
+            recipe_list.remove
+        when 4
+            exit   
+        end    
+    end
+
 
 
 end
+
+# Pantry menu method
 
 def pantry_menu(pantry_prompt)
     pantry_choices = [
@@ -50,6 +99,9 @@ def pantry_menu(pantry_prompt)
 
     pantry_prompt.select("Please choose an option:", pantry_choices)
 end
+
+
+# Recipe menu method
 
 def recipe_menu(recipe_prompt)
     recipe_choices = [
@@ -64,6 +116,7 @@ def recipe_menu(recipe_prompt)
     recipe_prompt.select("Please choose an option:", recipe_choices)
 end
 
+
 def progress_bar
     # Progress bar for generating recipe list
     bar = TTY::ProgressBar.new("[:bar]".center(150), total: 20, bar_format: :blade)
@@ -73,41 +126,7 @@ def progress_bar
     end
 end
 
-# system 'clear'
-welcome_message
-
-name = gets.strip.downcase
-
-pantry_list = Pantry.new(name)
-
-loop do
-  case pantry_menu(prompt)
-  when 1
-    pantry_list.view
-  when 2
-    pantry_list.add
-  when 3
-    pantry_list.remove
-  when 4
-    exit   
-  end    
-end
-
 
 ruby_recipe_logo
-welcome_message
 start_menu
 progress_bar
-
-
-# Make an exit button
-# Make an are you sure exit
-
-
-
-
-# TODO: Give user suggestions for pantry recipes
-# TODO: Say welcome back to the user
-# TODO: User can save a recipe
-# TODO: User can modify a recipe
-# TODO: 

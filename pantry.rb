@@ -1,9 +1,10 @@
 class Pantry
 
-
+    attr_reader :name, :file_path, :list
+    
     def initialize(name)
       @name = name
-      @file_path = "./lists/#{name}.txt"
+      @file_path = "#{name}.txt"
       @list = []
     end
   
