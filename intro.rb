@@ -73,6 +73,27 @@ def progress_bar
     end
 end
 
+system 'clear'
+welcome_message
+
+name = gets.strip.downcase
+
+pantry_list = Pantry.new(name)
+
+loop do
+  case menu(prompt)
+  when 1
+    pantry_list.view
+  when 2
+    pantry_list.add
+  when 3
+    pantry_list.remove
+  when 4
+    exit   
+  end    
+end
+
+
 ruby_recipe_logo
 welcome_message
 start_menu

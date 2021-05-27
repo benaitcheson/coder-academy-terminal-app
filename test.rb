@@ -15,6 +15,10 @@ request["x-rapidapi-host"] = 'edamam-recipe-search.p.rapidapi.com'
 response = http.request(request)
 puts response.read_body
 
+
+
+
+
 class StackExchange
     include HTTParty
     base_uri 'api.stackexchange.com'
@@ -30,8 +34,8 @@ class StackExchange
     def users
       self.class.get("/2.2/users", @options)
     end
-  end
+end
   
-  stack_exchange = StackExchange.new("stackoverflow", 1)
-  puts stack_exchange.questions
-  puts stack_exchange.
+stack_exchange = StackExchange.new("stackoverflow", 1)
+puts stack_exchange.questions
+puts stack_exchange.
