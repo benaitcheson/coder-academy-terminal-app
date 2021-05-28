@@ -1,2 +1,2 @@
-require relative 'intro.rb'
+puts "ruby recipe file is working"
 

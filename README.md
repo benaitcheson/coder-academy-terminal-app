@@ -10,17 +10,6 @@ By Ben Aitcheson - [My Github][1]
 
 Link to Repository - [Terminal App Repo][2]
 
-- [x] description
-- [x] statement of purpose
-- [ ] functionality
-- [x] instructions
-- [x] installation
-- [ ] design and planning
-- [x] flow chart
-- [ ] testing
-- [ ] code structure
-- [x] gems
-
 
 ## Description
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
@@ -46,7 +35,7 @@ If you have ruby installed on your computer there are a few steps to get RubyRec
 4. Type this code into the terminal.
 
 ```ruby
-bundle install 
+./run_app.sh
 ```
 
 5. Wait for the terminal to finish the install.
@@ -64,19 +53,20 @@ Features include:
 <img src="">
 
 
-1. Users can create a pantry.
-2. Users can search for recipes.
-3. Users can rate and review recipes.
-4. Users can generate a recipe list from the items in their pantry.
+### Users can Create a Pantry
+Users can add and remove items to an electronic list to mimic their pantry. 
 
+### Users can Search for Recipes
+The application can let each user search for recipes they want to cook and save each recipe to make later.
 
-Include how those use these...
-error handling
-loops
-variables
+### Users can Rate and Review Recipes
+After a user saves and makes a recipe they can give each saved recipe a rating and a review. 
+
+### Users can Generate a Recipe List from the Items in Their Pantry
+Once the user generates their pantry they have the option of populating a list of recipes based off their pantry items. This feature can save the user from buying more items or having to leave the house and will generate recipe idea's similar to the users pantry.
+
 
 ## Instructions/Interaction
-
 The user will be prompted for a name and their date of birth. This will be their login.
 
 Once logged for the first time the user will be prompted to build their pantry. Listing out all the items in their pantry and fridge. After completing this step the user can search recipes or have a list of recipes generated for them from the items in their pantry.
@@ -84,11 +74,14 @@ Once logged for the first time the user will be prompted to build their pantry. 
 Once a list of recipes has been generated the user can view a single recipe and save the recipe or choose to cook the recipe and make amendments or leave the recipe as it is.
 
 ## Design & Planning
-
 The design for this application was intended for the user to be able to step through a series of menu's allowing them to build a pantry and then amend their saved recipes.
 
-## Control Flow
+Include how those use these...
+error handling
+loops
+variables
 
+## Control Flow
 In this step Control Flow of the Terminal Application will be explained in detail.
 
 
@@ -100,11 +93,9 @@ In this step Control Flow of the Terminal Application will be explained in detai
 
 
 ## Testing
-
 Testing of the ruby code was done with a Gem called rSpec. 
 
 ## Gems
-
 Here is a list of the gems used for this application:
 
 - TTY Prompt
@@ -115,11 +106,9 @@ Here is a list of the gems used for this application:
 All gems sourced from [Rubygems.org][3]
 
 ## Authors
-
 Ben Aitcheson - [My Github account][1]
 
 ## Acknowledgments
-
 Thanks to the team at Coder Academy for their support.
 
 Style Guide from Airbnb : https://github.com/airbnb/ruby

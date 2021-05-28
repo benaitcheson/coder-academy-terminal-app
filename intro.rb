@@ -8,14 +8,13 @@ require 'httparty' # haven't used yet
 require 'highline/import' # haven't used yet
 require 'tty-progressbar'
 
-require_relative 'recipes.rb'
+require_relative 'recipe.rb'
 require_relative 'pantry.rb'
 
 # Initiate bundler & clear users terminal to start
 
 Bundler.require
-system 'clear'
-prompt = TTY::Prompt.new
+# system 'clear'
 
 def ruby_recipe_logo
     begin
@@ -48,12 +47,27 @@ end
 
 def start_menu
 
+    prompt = TTY::Prompt.new
+
     # system 'clear'
     welcome_message
+    
+    puts "Let's get your name and date of birth."
+    puts "What's your first name?"
 
-    name = gets.strip.downcase
+    user_name = gets.strip.downcase
 
-    pantry_list = Pantry.new(name)
+    puts "Now what's your date of birth (DDMMYYYY)?"
+
+    date_of_birth = gets.strip.upcase
+
+    puts "Thanks, just to confirm. You name is #{user_name.capitalize} and your date of birth is #{date_of_birth}? (Y/N)"
+
+    check_user = gets.strip.upcase
+
+    puts check_user
+
+    pantry_list = Pantry.new(user_name)
 
     loop do
         case pantry_menu(prompt)
@@ -68,7 +82,9 @@ def start_menu
         end    
     end
 
-    recipe_list = Recipe.new(name)
+    # NEED TO GO BACK TO MAIN MENU
+
+    recipe_list = Recipe.new(user_name)
 
     loop do
         case recipe_menu(prompt)
@@ -83,7 +99,7 @@ def start_menu
         end    
     end
 
-
+    # NEED TO GO BACK TO MAIN MENU
 
 end
 
