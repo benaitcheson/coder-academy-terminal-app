@@ -162,13 +162,27 @@ Testing of the ruby code was done with a Gem called rSpec.
 
 ---
 ## Gems
-Here is a list of the gems used for this application:
+Here is a list of the gems used for this application and a quick description on how they helped:
 
-- TTY Prompt
-- TTY Progressbar
-- TTY Table
-- JSON (haven't used this yet)
-- Artii
+- [TTY Prompt][7]
+
+This Gem helped to make menu items display in one action in the terminal.
+
+- [TTY Progressbar][8]
+
+This Gem was purely to display a loading bar to make it seems the terminal was loading or taking longer then anticipated.
+
+- [TTY Table][9]
+
+This Gem was used the display recipe ingredients in a easy to view table with minimal code.
+
+- [JSON (haven't used this yet)][10]
+
+This Gem helps display data from an API in a legible format.
+
+- [Artii][11]
+
+The Artii Gem was used to make a display header for the RubyRecipe logo.
 
 All gems sourced from [Rubygems.org][3]
 
@@ -190,3 +204,8 @@ API generated through RapidAPI: https://rapidapi.com/marketplace
 [4]: https://trello.com/
 [5]: https://pomofocus.io/
 [6]: https://rapidapi.com/marketplace
+[7]: https://rubygems.org/gems/tty-prompt
+[8]: https://rubygems.org/gems/tty-progressbar
+[9]: https://rubygems.org/gems/tty-table
+[10]: https://rubygems.org/gems/json
+[11]: https://rubygems.org/gems/artii
