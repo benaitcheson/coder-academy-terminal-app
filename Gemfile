@@ -6,7 +6,7 @@ group :development do
   gem "bundler"
   gem "artii"
   gem "tty-prompt"
-  gem "json"
-  gem "highline"
+  gem "tty-table"
   gem "tty-progressbar"
+  gem "json"
 end

@@ -1,6 +1,6 @@
 # my tests
 
-require relative 'intro.rb'
+require_relative 'intro.rb'
 
 describe 'something' do
 
@@ -11,6 +11,9 @@ describe 'something' do
     
 end
 
+# first test check user for string value
+
+# sescond test 
 
 
 

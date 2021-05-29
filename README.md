@@ -10,6 +10,7 @@ By Ben Aitcheson - [My Github][1]
 
 Link to Repository - [Terminal App Repo][2]
 
+---
 
 ## Description
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
@@ -27,12 +28,10 @@ With a small understanding of downloading a github repo and running a file in te
 ---
 ## Installation
 
-**Something about .sh file**
-
 If you have ruby installed on your computer there are a few steps to get RubyRecipe up and running.
 
 1. Download the git repo to your computer.
-2. Open the terminal or something to run the script.
+2. Open the terminal or something to run the script, could be bash or zsh.
 3. Navigate to the downloaded git repo.
 4. Type this code into the terminal.
 
@@ -40,14 +39,15 @@ If you have ruby installed on your computer there are a few steps to get RubyRec
 ./run_app.sh
 ```
 
-5. Wait for the terminal to finish the install.
-6. Type this code into the terminal to start the application.
+5. Wait for the terminal, this should launch the intro.rb file and fire up bundler to finish the install.
+
+6. Enjoy!
+
+Should the script file fail you can navigate to the location of the ruby files with the terminal and execute this code to start the app manually.
 
 ```ruby
 ruby intro.rb
 ```
-
-7. Enjoy!
 
 ---
 ## Functionality
@@ -64,8 +64,6 @@ The user will interact with this feature once selecting Pantry on the prompt men
 puts "Now what's your date of birth (DDMMYYYY)?"
 
     date_of_birth = gets.strip.upcase
-
-
 
 ```
 
@@ -159,6 +157,8 @@ Here's a flowchart of all the steps discussed above:
 ---
 ## Testing
 Testing of the ruby code was done with a Gem called rSpec. 
+
+Testing intro_spec.rb
 
 ---
 ## Gems

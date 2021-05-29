@@ -4,7 +4,6 @@ require 'rubygems'
 require 'bundler'
 require 'tty-prompt'
 require 'artii'
-require 'httparty' # haven't used yet
 require 'tty-progressbar'
 
 require_relative 'recipe.rb'
@@ -46,7 +45,7 @@ end
 
 # Check if returning use method
 
-def start_menu
+def user_check
 
     prompt = TTY::Prompt.new
 
@@ -69,10 +68,11 @@ def start_menu
     check_user = gets.strip.upcase
 
 
-
-    puts check_user
-
     puts "Awesome!"
+end
+
+
+def start_menu    
 
     pantry_list = Pantry.new(user_name)
 
@@ -85,29 +85,34 @@ def start_menu
         when 3
             pantry_list.remove
         when 4
+            start_menu(user_name) # this doesn't work'
+        when 5
             exit   
         end    
     end
-
-    # NEED TO GO BACK TO MAIN MENU
 
     recipe_list = Recipe.new(user_name)
 
     loop do
         case recipe_menu(prompt)
         when 1
-            recipe_list.view
+            # search method name
         when 2
-            recipe_list.add
+            # seatch method ingredients
         when 3
-            recipe_list.remove
+            # generate recipe list from pantry method
         when 4
-            exit   
+            recipe_list.view  
+        when 5
+            recipe_list.remove
+        when 6
+            # recipe list modify method
+        when 7
+            start_menu(user_name) # this doesn't work
+        when 8
+            exit
         end    
     end
-
-    # NEED TO GO BACK TO MAIN MENU
-
 end
 
 # Pantry menu method
@@ -117,7 +122,8 @@ def pantry_menu(pantry_prompt)
     {name: "View your pantry items", value: 1},
     {name: "Add an item/s to your pantry", value: 2},
     {name: "Remove items from the pantry", value: 3},
-    {name: "Quit", value: 4}
+    {name: "Back to main menu", value: 4},
+    {name: "Quit", value: 5}
     ]
 
     pantry_prompt.select("Please choose an option:", pantry_choices)
@@ -131,17 +137,19 @@ def recipe_menu(recipe_prompt)
     {name: "Search recipes via name", value: 1},
     {name: "Search recipes via ingredients", value: 2},
     {name: "Generate recipe search from items in pantry", value: 3},
-    {name: "Remove a saved recipe", value: 4},
-    {name: "Modify a saved recipe", value: 5},
-    {name: "Quit", value: 6}
+    {name: "View list of saved recipes", value: 4},
+    {name: "Remove a saved recipe", value: 5},
+    {name: "Modify a saved recipe", value: 6},
+    {name: "Back to main menu", value: 7},
+    {name: "Quit", value: 8}
     ]
 
     recipe_prompt.select("Please choose an option:", recipe_choices)
 end
 
+# Progress bar for generating recipe list
 
 def progress_bar
-    # Progress bar for generating recipe list
     bar = TTY::ProgressBar.new("[:bar]".center(150), total: 20, bar_format: :blade)
     20.times do
         sleep(0.1)
@@ -151,5 +159,6 @@ end
 
 
 ruby_recipe_logo
+user_check
 start_menu
 progress_bar
