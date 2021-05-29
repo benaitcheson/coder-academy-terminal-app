@@ -14,6 +14,7 @@ Link to Repository - [Terminal App Repo][2]
 ## Description
 This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
 
+---
 ## Statement of Purpose
 This application will receive food items the user has at their disposal and return some recipes that the user could make with the food they have, or return recipes the user would only need to get a small amount of additional items. The user can then rate recipes and have the recipe downloaded or emailed to them.
 
@@ -23,6 +24,7 @@ The target audience is people like me who have lots of stable ingredients in the
 
 With a small understanding of downloading a github repo and running a file in terminal anyone can use this app. Just follow the installation instructions in the next section.
 
+---
 ## Installation
 
 **Something about .sh file**
@@ -47,6 +49,7 @@ ruby intro.rb
 
 7. Enjoy!
 
+---
 ## Functionality
 This application has four main features which I'll define below.
 
@@ -69,8 +72,6 @@ puts "Now what's your date of birth (DDMMYYYY)?"
 Here's a list of the things I wanted a user to be able to do in the Pantry feature:
 <img src="../Feature1.png" alt="Should be an image here.">
 
----
-
 ### Users can Search for Recipes
 The application can let each user search for recipes they want to cook and save each recipe to make later. The user can search their saved recipes or they can search recipes on the internet either by name or by ingredients. There is also a sub feature where each user can flag items they would not want to see come up at all. This will eliminate all instances of the item.
 
@@ -79,21 +80,18 @@ Just like the Pantry feature the user will be guided into this feature from a pr
 Here's a list of the things I wanted a user to be able to do in the Search Recipe feature:
 <img src="../Feature2.png" alt="Should be an image here.">
 
----
-
 ### Users can Rate and Review Recipes
 After a user saves and makes a recipe they can give each saved recipe a rating and a review. The user can also make modifications to saved recipes. This will encourage the user to tailor recipes to be their own and hopefully encourage them to continue to use the app. This feature can be found under the Recipe menu as a sub menu. Once a list of saved recipes is returned to the user they can follow the prompt menu to make changes, save or unsave, leave a rating and leave a review. Ratings can only have numbers while reviews can be nil or have text only with a limit of 500 characters.
 
 Here's a list of the things I wanted a user to be able to do in the Rate and Review feature:
 <img src="../Feature3.png" alt="Should be an image here.">
 
----
-
 ### Users can Generate a Recipe List from the Items in Their Pantry
 Once the user generates their pantry they have the option of populating a list of recipes based off their pantry items. This feature can save the user from buying more items or having to leave the house and will generate recipe idea's similar to the users pantry. The user can access this feature through the Recipe menu, it will appear as a sub menu and the user will be shown a list of recipes automatically. Once a recipe is picked the user will be lead through the usual recipe workflow.
 
 Error handling will be done in a way to ensure the user has pantry items to generate a recipe list from. otherwise there's no more inputs from the user so just general error catches like rescues will be implemented to prevent other errors from happening, mostly around the API encountering issues.
 
+---
 ## Instructions/Interaction
 The user will be prompted for a name and their date of birth. This will be their login.
 
@@ -101,16 +99,25 @@ Once logged for the first time the user will be prompted to build their pantry. 
 
 Once a list of recipes has been generated the user can view a single recipe and save the recipe or choose to cook the recipe and make amendments or leave the recipe as it is.
 
+---
 ## Design, Planning and Implementation
-The design for this application was intended for the user to be able to step through a series of menu's allowing them to build a pantry and then amend their saved recipes.
+The design for this application was intended for the user to be able to step through a series of menu's allowing them to build a pantry and then save recipes and make their own amendments to those saved recipes.
 
-Include how those use these...
-error handling
-loops
-variables
+This entire application was programmed in Ruby for the terminal, besides a script file for launching the application after download. Features of Ruby used includes; cases, methods, loops, variables, error handling and test driven development. Following an unwritten rule in programming I stuck to a technique called DRY coding. The acronym stands for Do not Repeat Yourself.
 
-***insert images from Trello***
+ - Variables were used to hold data, whether they be a persons name, their date of birth or some response required from the user at a particular point in the control flow.
 
+ - Loops were used to step through the Pantry and Recipe prompt menus with TTY-Prompt paired with a case when method.
+
+ - Methods help make code blocks for actions and are then called when they are required. For example there is a method for both the Pantry and Recipe prompt menus. So when the user asks to be linked back to a menu the method is called and the method initiates.
+
+ - Cases 
+
+ - Error handling is used to catch any errors the code can throw or catch something the user might enter for a gets request.
+
+ - Test Driven Development (TDD) was used to guide the initial code. The application was written around the TDD. TDD was written with the help of a gem called rSpec (links to gem documentation listed below under 'Gems').
+
+To keep track of the progress throughout the coding process a project management software system called [Trello][4] was used. You can see some screenshots of the projects progression below.
 
 Where it started:
 <img src="../Trello1.png" alt="Should be an image here.">
@@ -123,10 +130,11 @@ Building out my feature ideas:
 Progress shot:
 <img src="../Trello3.png" alt="Should be an image here.">
 
+Nearly there:
+<>
 
 
-
-
+---
 ## Control Flow
 In this step Control Flow of the Terminal Application will be explained in detail.
 
@@ -137,10 +145,11 @@ In this step Control Flow of the Terminal Application will be explained in detai
 
 
 
-
+---
 ## Testing
 Testing of the ruby code was done with a Gem called rSpec. 
 
+---
 ## Gems
 Here is a list of the gems used for this application:
 
@@ -151,9 +160,11 @@ Here is a list of the gems used for this application:
 
 All gems sourced from [Rubygems.org][3]
 
+---
 ## Authors
 Ben Aitcheson - [My Github account][1]
 
+---
 ## Acknowledgments
 Thanks to the team at Coder Academy for their support.
 
@@ -164,3 +175,4 @@ API generated through RapidAPI: https://rapidapi.com/marketplace
 [1]: https://github.com/benaitcheson
 [2]: https://github.com/benaitcheson/terminal-app/
 [3]: https://rubygems.org/
+[4]: https://trello.com/
