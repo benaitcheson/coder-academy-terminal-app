@@ -93,3 +93,4 @@ class Pantry
       end
     end
   end
+end

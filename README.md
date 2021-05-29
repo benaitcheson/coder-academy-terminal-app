@@ -150,7 +150,7 @@ In this step Control Flow of the Terminal Application will be explained in detai
 
 4. In the Pantry feature the user can add items, remove items and view the entire list of items in the electronic pantry. In the Recipe feature users can search recipes, view saved recipes, generate a list of recipes from the pantry and remove recipes from the list. The search function will use an API generated through [Rapid API][6] to search the internet. The data returned will be converted to JSON format and a loop will be used to check the name of each recipe to the name searched.
 
-5. 
+5. Once the user is done with their queries they can exit the app with the quit function from the prompt menu.
 
 Here's a flowchart of all the steps discussed above:
 
@@ -166,6 +166,7 @@ Here is a list of the gems used for this application:
 
 - TTY Prompt
 - TTY Progressbar
+- TTY Table
 - JSON (haven't used this yet)
 - Artii
 
