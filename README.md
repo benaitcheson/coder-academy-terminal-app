@@ -72,7 +72,7 @@ Here's a list of the things I wanted a user to be able to do in the Pantry featu
 ---
 
 ### Users can Search for Recipes
-The application can let each user search for recipes they want to cook and save each recipe to make later. The user can search their saved recipes or they can search recipes on the internet either by name or by ingredients.
+The application can let each user search for recipes they want to cook and save each recipe to make later. The user can search their saved recipes or they can search recipes on the internet either by name or by ingredients. There is also a sub feature where each user can flag items they would not want to see come up at all. This will eliminate all instances of the item.
 
 Just like the Pantry feature the user will be guided into this feature from a prompt menu and once they user has finished with the search Recipe feature they will be given a prompt menu asking if they would like to navigate to the Pantry or back to Recipes. The same error handling as the Recipe feature will catch errors for the Recipe feature too. Code to ensure the users input is correct and rescue commands to catch run errors.
 
@@ -82,23 +82,17 @@ Here's a list of the things I wanted a user to be able to do in the Search Recip
 ---
 
 ### Users can Rate and Review Recipes
-After a user saves and makes a recipe they can give each saved recipe a rating and a review. 
+After a user saves and makes a recipe they can give each saved recipe a rating and a review. The user can also make modifications to saved recipes. This will encourage the user to tailor recipes to be their own and hopefully encourage them to continue to use the app. This feature can be found under the Recipe menu as a sub menu. Once a list of saved recipes is returned to the user they can follow the prompt menu to make changes, save or unsave, leave a rating and leave a review. Ratings can only have numbers while reviews can be nil or have text only with a limit of 500 characters.
 
-- how the user will find out how to interact with / use each feature
-- how the user will interact with / use each feature
-- how errors will be handled by the application and displayed to the user
-
+Here's a list of the things I wanted a user to be able to do in the Rate and Review feature:
 <img src="../Feature3.png" alt="Should be an image here.">
 
 ---
 
 ### Users can Generate a Recipe List from the Items in Their Pantry
-Once the user generates their pantry they have the option of populating a list of recipes based off their pantry items. This feature can save the user from buying more items or having to leave the house and will generate recipe idea's similar to the users pantry.
+Once the user generates their pantry they have the option of populating a list of recipes based off their pantry items. This feature can save the user from buying more items or having to leave the house and will generate recipe idea's similar to the users pantry. The user can access this feature through the Recipe menu, it will appear as a sub menu and the user will be shown a list of recipes automatically. Once a recipe is picked the user will be lead through the usual recipe workflow.
 
-- how the user will find out how to interact with / use each feature
-- how the user will interact with / use each feature
-- how errors will be handled by the application and displayed to the user
-
+Error handling will be done in a way to ensure the user has pantry items to generate a recipe list from. otherwise there's no more inputs from the user so just general error catches like rescues will be implemented to prevent other errors from happening, mostly around the API encountering issues.
 
 ## Instructions/Interaction
 The user will be prompted for a name and their date of birth. This will be their login.
@@ -107,7 +101,7 @@ Once logged for the first time the user will be prompted to build their pantry. 
 
 Once a list of recipes has been generated the user can view a single recipe and save the recipe or choose to cook the recipe and make amendments or leave the recipe as it is.
 
-## Design & Planning
+## Design, Planning and Implementation
 The design for this application was intended for the user to be able to step through a series of menu's allowing them to build a pantry and then amend their saved recipes.
 
 Include how those use these...
