@@ -5,7 +5,6 @@ require 'bundler'
 require 'tty-prompt'
 require 'artii'
 require 'httparty' # haven't used yet
-require 'highline/import' # haven't used yet
 require 'tty-progressbar'
 
 require_relative 'recipe.rb'
@@ -14,7 +13,9 @@ require_relative 'pantry.rb'
 # Initiate bundler & clear users terminal to start
 
 Bundler.require
-# system 'clear'
+system 'clear'
+
+# Method for application banner
 
 def ruby_recipe_logo
     begin
@@ -63,9 +64,15 @@ def start_menu
 
     puts "Thanks, just to confirm. You name is #{user_name.capitalize} and your date of birth is #{date_of_birth}? (Y/N)"
 
+    # loop to check user details are correct
+
     check_user = gets.strip.upcase
 
+
+
     puts check_user
+
+    puts "Awesome!"
 
     pantry_list = Pantry.new(user_name)
 

@@ -48,22 +48,56 @@ ruby intro.rb
 7. Enjoy!
 
 ## Functionality
-Features include:
-
-<img src="">
-
+This application has four main features which I'll define below.
 
 ### Users can Create a Pantry
-Users can add and remove items to an electronic list to mimic their pantry. 
+Users can add and remove items to an electronic list to mimic their pantry. Using prompting the user can navigate through the menu's and populate their pantry. The user will be given the option once greeted to select the Pantry list or the Recipe list. Once finished with the list the user is given the option to go back to the main menu where they will be given the Pantry or Recipe list option.
+
+The user will interact with this feature once selecting Pantry on the prompt menu. The following menu will have a list of sub features (see below image), these features help the user manipulate their Pantry items. Following this errors and error handling will be done with rescue commands to ensure the code runs smoothly and code to ensure the values the user is putting in are the required values, e.g...
+
+```ruby
+# check dob
+
+puts "Now what's your date of birth (DDMMYYYY)?"
+
+    date_of_birth = gets.strip.upcase
+
+
+
+```
+
+Here's a list of the things I wanted a user to be able to do in the Pantry feature:
+<img src="../Feature1.png" alt="Should be an image here.">
+
+---
 
 ### Users can Search for Recipes
-The application can let each user search for recipes they want to cook and save each recipe to make later.
+The application can let each user search for recipes they want to cook and save each recipe to make later. The user can search their saved recipes or they can search recipes on the internet either by name or by ingredients.
+
+Just like the Pantry feature the user will be guided into this feature from a prompt menu and once they user has finished with the search Recipe feature they will be given a prompt menu asking if they would like to navigate to the Pantry or back to Recipes. The same error handling as the Recipe feature will catch errors for the Recipe feature too. Code to ensure the users input is correct and rescue commands to catch run errors.
+
+Here's a list of the things I wanted a user to be able to do in the Search Recipe feature:
+<img src="../Feature2.png" alt="Should be an image here.">
+
+---
 
 ### Users can Rate and Review Recipes
 After a user saves and makes a recipe they can give each saved recipe a rating and a review. 
 
+- how the user will find out how to interact with / use each feature
+- how the user will interact with / use each feature
+- how errors will be handled by the application and displayed to the user
+
+<img src="../Feature3.png" alt="Should be an image here.">
+
+---
+
 ### Users can Generate a Recipe List from the Items in Their Pantry
 Once the user generates their pantry they have the option of populating a list of recipes based off their pantry items. This feature can save the user from buying more items or having to leave the house and will generate recipe idea's similar to the users pantry.
+
+- how the user will find out how to interact with / use each feature
+- how the user will interact with / use each feature
+- how errors will be handled by the application and displayed to the user
 
 
 ## Instructions/Interaction
@@ -80,6 +114,24 @@ Include how those use these...
 error handling
 loops
 variables
+
+***insert images from Trello***
+
+
+Where it started:
+<img src="../Trello1.png" alt="Should be an image here.">
+
+
+Building out my feature ideas:
+<img src="../Trello2.png" alt="Should be an image here.">
+
+
+Progress shot:
+<img src="../Trello3.png" alt="Should be an image here.">
+
+
+
+
 
 ## Control Flow
 In this step Control Flow of the Terminal Application will be explained in detail.
@@ -100,7 +152,7 @@ Here is a list of the gems used for this application:
 
 - TTY Prompt
 - TTY Progressbar
-- JSON
+- JSON (haven't used this yet)
 - Artii
 
 All gems sourced from [Rubygems.org][3]
