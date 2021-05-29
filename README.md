@@ -111,7 +111,7 @@ This entire application was programmed in Ruby for the terminal, besides a scrip
 
  - Methods help make code blocks for actions and are then called when they are required. For example there is a method for both the Pantry and Recipe prompt menus. So when the user asks to be linked back to a menu the method is called and the method initiates.
 
- - Cases 
+ - Cases help keep features and methods together. This is essential for large projects with lots of features.
 
  - Error handling is used to catch any errors the code can throw or catch something the user might enter for a gets request.
 
@@ -122,28 +122,39 @@ To keep track of the progress throughout the coding process a project management
 Where it started:
 <img src="../Trello1.png" alt="Should be an image here.">
 
-
 Building out my feature ideas:
 <img src="../Trello2.png" alt="Should be an image here.">
-
 
 Progress shot:
 <img src="../Trello3.png" alt="Should be an image here.">
 
 Nearly there:
-<>
+<img src="../Trello4.png" alt="Should be an image here.">
 
+Last one:
+<img src="" alt="Should be an image here.">
+
+Along with Trello a time management technique called Pomodoro timing was used to help manage my time. Each feature was listed in the Pomodoro clock and given 25min uninterrupted time to complete. Rough amounts of Pomodoros were initially assigned to each task but as they took longer then expected there was no cap on each but it was helpful to see a holistic view of time spent on each feature. The Pomodoro clock app I used was [Pomo Focus][5]
+
+<img src="../pomo.png" alt="Should see a list of focus times. I usually forget to turn this on." width=400px>
 
 ---
 ## Control Flow
-In this step Control Flow of the Terminal Application will be explained in detail.
+In this step Control Flow of the Terminal Application will be explained in detail and a flowchart will be referred to.
 
+1. Once the application is launched, the user will be prompted with a request for their name and date of birth. This will be used to keep track of each user. The application will then loop through existing users to see if the name and date of birth match. If a returning user they will be greeted with a welcome back message.
 
+2. For first time users the application will request that they populate the Pantry first. Each item the user inputs will populate and array of hashes. For returning users they will be greeted with a menu asking if they'd like to view their Pantry and make changes or would they like to go straight to the Recipe menu. These menus are used with the assistance of the Ruby gem called, TTY-Prompt.
 
+3. This is where the application branches in two directions. The user can choose to see all the Pantry features and sub features or the user can see the Recipes and the sub recipe features. A method has been created to step the user through each menu. Once in the menu each sub menu is controlled with a case.
+
+4. In the Pantry feature the user can add items, remove items and view the entire list of items in the electronic pantry. In the Recipe feature users can search recipes, view saved recipes, generate a list of recipes from the pantry and remove recipes from the list. The search function will use an API generated through [Rapid API][6] to search the internet. The data returned will be converted to JSON format and a loop will be used to check the name of each recipe to the name searched.
+
+5. 
+
+Here's a flowchart of all the steps discussed above:
 
 <img src="../terminal-app/flowchart.png">
-
-
 
 ---
 ## Testing
@@ -176,3 +187,5 @@ API generated through RapidAPI: https://rapidapi.com/marketplace
 [2]: https://github.com/benaitcheson/terminal-app/
 [3]: https://rubygems.org/
 [4]: https://trello.com/
+[5]: https://pomofocus.io/
+[6]: https://rapidapi.com/marketplace
