@@ -1,45 +1,31 @@
 # my tests
 
-require_relative 'intro.rb'
+#describe 'check if returning user or new user' do
+#    it 'should return a string' do
+#      name = name.new("scott")
+#      expect(name.user).to eq "scott"
+#      expect(name.user).to match "scott"
+#      expect(name) to be_instance_of Name
+#    end    
+#end
 
-describe 'something' do
-
-    it 'should return matching recipes to the user input' do
-        expect().to be()
-    end
-
-    
-end
-
-# first test check user for string value
-
-# sescond test 
-
-
-
-
-
-# Coder acadmey tests
-
-require_relative '../intro.rb'
-
-describe "something" do
-  context "#view new user todo list" do
+describe "test Pantry list" do
+  context "#view the Pantry list" do
     before do
-      @todo = List.new('new_user')
+      @pantry_list = Pantry.new(name)
     end
 
-    it 'should create a new file' do
-      @todo.view
-      expect(File.exist?('./lists/new_user.txt')).to be true
+    it 'should create a new user file' do
+      @pantry_list.view
+      expect(File.exist?('./#{name}.txt')).to be true
     end
 
     it 'should be empty' do
-      expect(File.size('./lists/new_user.txt')).to eq(0)
+      expect(File.size('./#{name}.txt')).to eq(0)
     end
 
     after(:context) do
-      File.delete('./lists/new_user.txt')
+      File.delete('./#{name}.txt')
     end
   end
 end

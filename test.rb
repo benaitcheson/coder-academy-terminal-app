@@ -1,32 +1,20 @@
 require 'uri'
 require 'net/http'
 require 'openssl'
-require 'JSON'
-require 'tty-prompt'
 
 
 
-def api
-    
-    recipe_search = PROMPT.ask("What would you like to search for? >> ")
-    
-    url = URI("https://edamam-recipe-search.p.rapidapi.com/search?q=#{recipe_search}")
+# Use this API to search recipes
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+url = URI("https://recipe-puppy.p.rapidapi.com/?i=onions")
 
-    request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-key"] = '54b589ade0msh9a962dde82e2462p17b6c5jsnaec97a63dce2'
-    request["x-rapidapi-host"] = 'edamam-recipe-search.p.rapidapi.com'
-    request["content-type"] = 'application/x-www-form-urlencoded'
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-    response = http.request(request)
-    JSON.parse(response.read_body)
+request = Net::HTTP::Get.new(url)
+request["x-rapidapi-key"] = '54b589ade0msh9a962dde82e2462p17b6c5jsnaec97a63dce2'
+request["x-rapidapi-host"] = 'recipe-puppy.p.rapidapi.com'
 
-    puts response
-end
-
-
-
-    
+response = http.request(request)
+puts response.read_body

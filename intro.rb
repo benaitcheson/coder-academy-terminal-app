@@ -8,6 +8,7 @@ require 'tty-progressbar'
 
 require_relative 'recipe.rb'
 require_relative 'pantry.rb'
+require_relative 'test.rb'
 
 # Initiate bundler & clear users terminal to start
 
@@ -47,7 +48,7 @@ end
 
 def user_check
 
-    prompt = TTY::Prompt.new
+    @@prompt = TTY::Prompt.new
 
     # system 'clear'
     welcome_message
@@ -74,10 +75,10 @@ end
 
 def start_menu    
 
-    pantry_list = Pantry.new(user_name)
+    pantry_list = Pantry.new(name)
 
     loop do
-        case pantry_menu(prompt)
+        case pantry_menu(@@prompt)
         when 1
             pantry_list.view
         when 2
@@ -85,16 +86,16 @@ def start_menu
         when 3
             pantry_list.remove
         when 4
-            start_menu(user_name) # this doesn't work'
+            start_menu(name) # this doesn't work'
         when 5
             exit   
         end    
     end
 
-    recipe_list = Recipe.new(user_name)
+    recipe_list = Recipe.new(name)
 
     loop do
-        case recipe_menu(prompt)
+        case recipe_menu(@@prompt)
         when 1
             # search method name
         when 2
@@ -108,7 +109,7 @@ def start_menu
         when 6
             # recipe list modify method
         when 7
-            start_menu(user_name) # this doesn't work
+            start_menu(name) # this doesn't work
         when 8
             exit
         end    

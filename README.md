@@ -12,8 +12,10 @@ Link to Repository - [Terminal App Repo][2]
 
 ---
 
+<img src="../Title.png" alt="Should be a logo here" width=400px>
+
 ## Description
-This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items.
+This application was designed and built to solve my issue of having items in the pantry/fridge but not knowing what meals I can make with the items at hand. The user can input their items and the RubyRecipe application will search the database for the most relevant recipes for those items. Examples of web based applications similar to what I aimed to build are [Recipe Puppy][12] and [Super Cook][13].
 
 ---
 ## Statement of Purpose
@@ -209,3 +211,5 @@ API generated through RapidAPI: https://rapidapi.com/marketplace
 [9]: https://rubygems.org/gems/tty-table
 [10]: https://rubygems.org/gems/json
 [11]: https://rubygems.org/gems/artii
+[12]: http://www.recipepuppy.com/
+[13]: https://www.supercook.com/#/recipes

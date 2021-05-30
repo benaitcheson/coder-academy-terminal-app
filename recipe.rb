@@ -1,3 +1,7 @@
 require "tty-table"
 
-table = TTY::Table.new(["header1","header2"], [["a1", "a2"], ["b1", "b2"]])
+
+table = TTY::Table.new(["Quantity","Ingredients"], [["1x", "Tomato"], ["2x", "Onion"]])
+
+
+print table
